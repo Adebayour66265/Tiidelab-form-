@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiideLab signup Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="result.js" defer></script>
+</head>
+<body>
+    
+    <div id="container">
+    <form id="create-account-form" action="result.html" method="GET">
+                <div class="logo">
+             <img src="Logo.png" alt="This is my logo">
+            </div>
+            <div class="form-hs">
+                <h2 class="form-heading">Student Registration Form</h2>
+                <p>Fill out the form to apply for the training courses. You can consider your application accepted after you receive a
+                    <br> confirmation email</p>
+                     </div>
+                     <div class="input-field">
+            <h3>Student Information</h3>
+       <input type="text"  name="firstName" id="firstName" placeholder="First Name" required class="inputText" > 
+       <input type="text"  name="middleName" id="middleName" placeholder="Middle Name" required class="inputText" > 
+       <input type="text"  name="lastName" id="lastName" placeholder="Last Name" required class="inputText">
+       <input placeholder="Date of Birth" type="text" onfocus="(this.type = 'date')"  id="DoB" class="percentDiv"> 
+       <input type="number" name="StudentID" id="StudentID" placeholder="Student ID" class="percentDiv">
+        
+            <h3>Address</h3>
+       <input type="text" name="address" id="address" placeholder="Street Address" style="width: 94%; margin: 5px;
+       padding: 10px;
+       border-radius: 5px;
+       border: 2px solid black;";class="inputText"> 
+       <input type="text" name="city" id="city" placeholder="city" required style="width: 45%"; class="inputText" >
+       <input type="text" name="state" id="state" placeholder="State/Province" required class="inputText"style="width: 45%" >
+       <input type="text" name="country" id="country" placeholder="Country" style="width: 45%"; class="inputText">
+       <input type="number" name="zipcode" id="zipcode" placeholder="ZIP Code" style="width: 45%"; class="inputText">
+        
+            <h3>Contact Information</h3>
+       <input type="email" name="email" id="email" placeholder="Email" required style="width: 45%"; class="inputText">
+       <input type="email" name="confirmemail" id="confirmemail" class="inputText" style="width: 45%";> <br><br>
+
+       <div class="record">
+       <button class="add" type="button">
+        + Add new record
+       </button> 
+        <h3>Courses<span class="course">*</span></h3>
+        <select name="course" id="courses">
+            <option value="course">Course</option>
+            <option value="Front-end">Front-End</option>
+            <option value="Back-end">Back-End</option>
+            <option value="Fullstack">FullStack</option>
+        </select>
+        <select name="level" id="level">
+            <option value="Level">Level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advance">Advance</option>
+        </select>
+        <select name="lang" id="lang">
+            <option value="Language">Language</option>
+            <option value="Hausa">Hausa</option>
+            <option value="igbo">Igbo</option>
+            <option value="Yoruba">Yoruba</option>
+        </select>
+        <select class="form-select" name="date" id="date">
+            <option value="Start">Start Date</option>
+            <option value="2015">2015</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+    </div>
+    <textarea name="comment" id="comment" placeholder="Comments" cols="30" rows="10"></textarea> 
+    <button class="submit-btn" type="submit" >
+        SEND REQUEST
+    </button>
+    </form>
+</div>
+</body>
+</html>
