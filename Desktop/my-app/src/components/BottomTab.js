@@ -5,11 +5,12 @@ import Icons, { icons } from './Icons';
 
 const tabIcons = [
   { ico1: "home", ico2: "home", type: icons.Feather, routeName: 'Feeds' },
-  // { ico1: "grid-outline", ico2: "grid", type: icons.Entypo, routeName: '' },
-  { ico1: 'grid', ico2: 'grid', type: icons.Feather, routeName: '' },
+  // { ico1: 'grid', ico2: 'grid', type: icons.Feather, routeName: '' },
+  { ico1: 'appstore-o', ico2: 'appstore-o', type: icons.AntDesign, routeName: '' },
+  { ico1: 'eye', ico2: 'eye', type: icons.Feather, routeName: '' },
   { ico1: 'eye', ico2: 'eye', type: icons.Feather, routeName: '' },
   { ico1: 'message1', ico2: 'message1', type: icons.AntDesign, routeName: '' },
-  // { ico1: 'message1', ico2: 'message1', type: icons.AntDesign, routeName: '' },
+  { ico1: 'shopping-cart', ico2: 'shopping-cart', type: icons.FontAwesome5, routeName: '' },
   { ico1: 'user-circle', ico2: 'user-circle', type: icons.FontAwesome, routeName: '' },
 
 ]
@@ -49,19 +50,13 @@ export default BottomTab
 
 const styles = StyleSheet.create({
   plusIconStyle: {
-    bottom: 24,
-    width: 60,
     height: 60,
-    borderRadius: 30,
-    backgroundColor: Colors.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: 'black',
-    shadowOffset: { width: 2, height: 2 },
-    shadowOpacity: 0.6,
-    elevation: 8,
-    borderWidth: 4,
-    borderColor: Colors.white,
+    position: 'absolute',
+    bottom: 16,
+    right: 16,
+    left: 16,
+    borderRadius: 16,
+    display: 'none'
   },
 
 
