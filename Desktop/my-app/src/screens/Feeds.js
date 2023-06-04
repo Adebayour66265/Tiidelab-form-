@@ -1,11 +1,54 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Animated, FlatList, StyleSheet, View } from 'react-native'
+// import { Animated, FlatList, StyleSheet, View } from 'react-native'
+import { Animated, FlatList, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import Colors from '../constants/Colors'
 import { Surface, Text } from 'react-native-paper'
 import Icons, { icons } from '../components/Icons'
 import MyHeader from '../components/MyHeader'
-import BottomTab from '../components/BottomTab'
 
+import { data } from '../constants/raw'
+import { SharedElement } from 'react-navigation-shared-element'
+import BottomTab from '../components/BottomTab'
+import Pinchable from 'react-native-pinchable';
+
+const RenderItem = ({ item, navigation }) => {
+  return (
+    <Surface style={styles.item}>
+      <View style={styles.content}>
+        <SharedElement id={`item.${item.avatar}.avatar`}>
+          <Image style={styles.avatar} source={{ uri: item.avatar }} resizeMode="cover" />
+        </SharedElement>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.caption}>{item.caption}</Text>
+        </View>
+        <View style={{ position: 'absolute', top: 16, right: 0 }}>
+          <Icons icon={icons.Entypo} name="dots-three-vertical" size={18} />
+        </View>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => navigation.navigate('Detail', { item })}>
+        <SharedElement id={`item.${item.image}.image`}>
+
+          <Image style={styles.image} source={{ uri: item.image }} resizeMode="cover" />
+
+        </SharedElement>
+      </TouchableOpacity>
+      <View style={styles.bottomView}>
+        <View style={styles.icon}>
+          <Icons icon={icons.AntDesign} name="heart" color={Colors.primary} />
+        </View>
+        <View style={styles.icon}>
+          <Icons icon={icons.Ionicons} name="chatbubble-outline" />
+        </View>
+        <View style={styles.icon}>
+          <Icons icon={icons.Feather} name="send" />
+        </View>
+      </View>
+    </Surface>
+  )
+}
 
 const CONTAINER_HEIGHT = 50;
 
@@ -85,9 +128,9 @@ const Feeds = ({ route, navigation }) => {
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],
           { useNativeDriver: true }
         )}
-
+        data={data}
         keyExtractor={(item, index) => item.title + index.toString()}
-        navigation={navigation}
+        renderItem={({ item }) => <RenderItem item={item} navigation={navigation} />}
         contentContainerStyle={styles.contentContainerStyle}
         onMomentumScrollBegin={onMomentumScrollBegin}
         onMomentumScrollEnd={onMomentumScrollEnd}
