@@ -85,7 +85,7 @@ const Feeds = ({ route, navigation }) => {
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],
           { useNativeDriver: true }
         )}
-        data={data}
+
         keyExtractor={(item, index) => item.title + index.toString()}
         navigation={navigation}
         contentContainerStyle={styles.contentContainerStyle}
