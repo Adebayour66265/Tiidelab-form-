@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 	rightView: {
-		justifyContent: 'flex-end',
+		justifyContent: 'flex-start',
 	},
 	rowView: {
 		flexDirection: 'row',
 		alignItems: 'center',
-		marginRight: 10,
+		marginLeft: 10,
 	}
 })

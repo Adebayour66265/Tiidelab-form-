@@ -5,11 +5,10 @@ import Colors from '../constants/Colors'
 import { Surface, Text } from 'react-native-paper'
 import Icons, { icons } from '../components/Icons'
 import MyHeader from '../components/MyHeader'
-
 import { data } from '../constants/raw'
 import { SharedElement } from 'react-navigation-shared-element'
 import BottomTab from '../components/BottomTab'
-import Pinchable from 'react-native-pinchable';
+// import Pinchable from 'react-native-pinchable';
 
 const RenderItem = ({ item, navigation }) => {
   return (
@@ -139,7 +138,7 @@ const Feeds = ({ route, navigation }) => {
       />
       <Animated.View style={[styles.view, { top: 0, transform: [{ translateY: headerTranslate }] }]}>
         <MyHeader
-          menu
+
           title={route.name}
           right="search"
           style={[styles.header, { opacity }]}

@@ -6,9 +6,11 @@ import Icons, { icons } from './Icons';
 const tabIcons = [
   { ico1: "home", ico2: "home-outline", type: icons.Ionicons, routeName: 'Feeds' },
   { ico1: 'like1', ico2: 'like2', type: icons.AntDesign, routeName: '' },
-  { ico1: "plus", ico2: "plus", type: icons.Entypo, routeName: '' },
+  // { ico1: "plus", ico2: "plus", type: icons.Entypo, routeName: '' },
+  // { ico1: "plus", ico2: "plus", type: icons.Entypo, routeName: '' },
   { ico1: "chatbox-ellipses", ico2: 'chatbox-ellipses-outline', type: icons.Ionicons, routeName: '' },
-  { ico1: 'user', ico2: 'user-o', type: icons.FontAwesome, routeName: 'Profile' },
+  { ico1: "chatbox-ellipses", ico2: 'chatbox-ellipses-outline', type: icons.Ionicons, routeName: '' },
+  { ico1: 'user', ico2: 'user-o', type: icons.FontAwesome, routeName: '' },
 ]
 
 const BottomTab = ({ navigation }) => {
