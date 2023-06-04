@@ -4,13 +4,14 @@ import Colors from '../constants/Colors';
 import Icons, { icons } from './Icons';
 
 const tabIcons = [
-  { ico1: "home", ico2: "home-outline", type: icons.Ionicons, routeName: 'Feeds' },
-  { ico1: 'like1', ico2: 'like2', type: icons.AntDesign, routeName: '' },
-  // { ico1: "plus", ico2: "plus", type: icons.Entypo, routeName: '' },
-  // { ico1: "plus", ico2: "plus", type: icons.Entypo, routeName: '' },
-  { ico1: "chatbox-ellipses", ico2: 'chatbox-ellipses-outline', type: icons.Ionicons, routeName: '' },
-  { ico1: "chatbox-ellipses", ico2: 'chatbox-ellipses-outline', type: icons.Ionicons, routeName: '' },
-  { ico1: 'user', ico2: 'user-o', type: icons.FontAwesome, routeName: '' },
+  { ico1: "home", ico2: "home", type: icons.Feather, routeName: 'Feeds' },
+  // { ico1: "grid-outline", ico2: "grid", type: icons.Entypo, routeName: '' },
+  { ico1: 'grid', ico2: 'grid', type: icons.Feather, routeName: '' },
+  { ico1: 'eye', ico2: 'eye', type: icons.Feather, routeName: '' },
+  { ico1: 'message1', ico2: 'message1', type: icons.AntDesign, routeName: '' },
+  // { ico1: 'message1', ico2: 'message1', type: icons.AntDesign, routeName: '' },
+  { ico1: 'user-circle', ico2: 'user-circle', type: icons.FontAwesome, routeName: '' },
+
 ]
 
 const BottomTab = ({ navigation }) => {
@@ -62,4 +63,6 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: Colors.white,
   },
+
+
 })

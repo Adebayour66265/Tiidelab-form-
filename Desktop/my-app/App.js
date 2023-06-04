@@ -16,10 +16,7 @@ const MyStack = () => {
 const App = () => {
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor='black' barStyle="light-content" />
-      {
-        <MyStack />
-      }
+      <MyStack />
     </NavigationContainer>
 
   )

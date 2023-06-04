@@ -24,7 +24,7 @@ const AppHeader = ({ style, menu, back, onPressBack, title, right, onRightPress,
 			<View style={[styles.view, styles.rightView]}>
 				{optionalBtn && <TouchableOpacity style={styles.rowView} onPress={optionalBtnPress}>
 					<Feather name={optionalBtn} size={IconSize} color={iconColor} />
-					{optionalBadge && <Badge style={{ position: 'absolute', top: -5, right: -10 }}>{optionalBadge}</Badge>}
+					{optionalBadge && <Badge style={{ position: 'absolute', top: 0, right: -10 }}>{optionalBadge}</Badge>}
 				</TouchableOpacity>}
 				{right && <TouchableOpacity onPress={onRightPress}>
 					<Feather name={right} size={IconSize} color={iconColor} />
